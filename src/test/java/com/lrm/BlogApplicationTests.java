@@ -1,4 +1,4 @@
-package com.lrm.blog;
+package com.lrm;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
