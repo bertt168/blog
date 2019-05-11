@@ -1,4 +1,4 @@
-package com.lrm.Handler;
+package com.lrm.handler;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
