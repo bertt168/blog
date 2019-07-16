@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--網頁預覽效果-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/animate.css">
+    <link rel="stylesheet" href="../static/css/typo.css">
+    <link rel="stylesheet" href="../static/css/me.css">
+    <link rel="stylesheet" href="../static/lib/prism/prism.css">
+    <link rel="stylesheet" href="../static/lib/tocbot/tocbot.css">
+</head>
+<body>
+
+
+<!--menu-->
+<!--attached讓導航列沒有圓角 inverted反轉顏色 -->
+<nav class="ui inverted attached segment m-padded-tb-mini">
+    <div class="ui container">
+        <!--secondary 改變樣式-->
+        <div class="ui inverted secondary stackable menu">
+            <h2 class="ui teal header item">Blog</h2>
+            <a herf="#" class="m-item item m-mobile-hide"><i class="mini home icon"></i>首頁</a>
+            <a herf="#" class="m-item item m-mobile-hide"><i class="mini idea icon"></i>分類</a>
+            <a herf="#" class="m-item item m-mobile-hide"><i class="mini tags icon"></i>標籤</a>
+            <a herf="#" class="m-item item m-mobile-hide"><i class="mini tags icon"></i>歷史</a>
+            <a herf="#" class="m-item item m-mobile-hide"><i class="mini info icon"></i>關於我</a>
+            <div class="right m-item item m-mobile-hide">
+                <div class="ui icon inverted transparent input">
+                    <input type="text" placeholder="search...">
+                    <i class="search link icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+        <i class="sidebar icon"></i>
+    </a>
+</nav>
+
+
+<!--內容-->
+<div class="m-container-small m-padded-tb-big animated fadeIn">
+    <!--文章資訊-->
+    <div class="ui container">
+        <div class="ui top attached padded segment">
+            <div class="ui horizontal link list">
+                <div class="item">
+                    <!--avatar小的圓形圖片ui-->
+                    <img src="https://picsum.photos/800/450?image=1004" alt="" class="ui avatar image">
+                    <div class="content"><a href="" class="header">myname</a></div>
+                </div>
+                <div class="item">
+                    <!--日期的圖標-->
+                    <i class="calender icon"></i>   2019-03-20
+                </div>
+                <div class="item">
+                    <!--瀏覽次數icon-->
+                    <i class="eye icon"></i>    5
+                </div>
+            </div>
+        </div>
+        <!--文章內容-->
+        <div class="ui attached segment">
+            <img src="https://picsum.photos/800/450?image=999" alt="" class="ui fluid rounded image">
+        </div>
+        <div class="ui attached segment">
+            <div class="ui right aligned basic segment">
+                <div class="ui orange basic label">test</div>
+            </div>
+            <div>
+                <h2 class="ui center aligned header">test標題!!!</h2>
+
+                <div id="content" class="typo typo-selection js-toc-content m-padded-lr-responsive m-padded-tb-large">
+
+                    <pre><code class="language-css">p { color: red }</code></pre>
+
+                    <h2 id="tag_line" class="serif">一致化浏览器排版效果，构建最适合中文阅读的网页排版</h2>
+
+                    <pre><code class="language-css">
+/* 标题应该更贴紧内容，并与其他块区分，margin 值要相应做优化 */
+h1,h2,h3,h4,h5,h6 {
+    line-height:1;font-family:Arial,sans-serif;margin:1.4em 0 0.8em;
+}
+h1{font-size:1.8em;}
+h2{font-size:1.6em;}
+h3{font-size:1.4em;}
+h4{font-size:1.2em;}
+h5,h6{font-size:1em;}
+
+/* 现代排版：保证块/段落之间的空白隔行 */
+.typo p, .typo pre, .typo ul, .typo ol, .typo dl, .typo form, .typo hr {
+    margin:1em 0 0.6em;
+}
+                </code></pre>
+
+                    <p><strong><i class="serif">Typo.css</i> 测试于如下平台：</strong></p>
+                    <table class="ui table" summary="Typo.css 的测试平台列表">
+                        <thead>
+                        <tr>
+                            <th>OS/浏览器</th>
+                            <th>Firefox</th>
+                            <th>Chrome</th>
+                            <th>Safari</th>
+                            <th>Opera</th>
+                            <th>IE9</th>
+                            <th>IE8</th>
+                            <th>IE7</th>
+                            <th>IE6</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>OS X</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Win 7</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Win XP</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                            <td>-</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                        </tr>
+                        <tr>
+                            <td>Ubuntu</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                            <td>-</td>
+                            <td>✔</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <h4>中文排版的重点和难点</h4>
+
+                    <p>在中文排版中，HTML4 的很多标准在语义在都有照顾到。但从视觉效果上，却很难利用单独的 CSS 来实现，像<abbr title="在文字下多加一个点">着重号</abbr>（例：这里<em class="typo-em">强调一下</em>）。在 HTML4 中，专名号标签（<code>&lt;u&gt;</code>）已经被放弃，而
+                        HTML5 被<a href="http://html5doctor.com/u-element/">重新提起</a>。<i class="serif">Typo.css</i> 也根据实际情况提供相应的方案。我们重要要注意的两点是：</p>
+                    <ol>
+                        <li>语义：语义对应的用法和样式是否与中文排版一致</li>
+                        <li>表现：在各浏览器中的字体、大小和缩放是否如排版预期</li>
+                    </ol>
+                    <p>对于这些，<i class="serif">Typo.css</i> 排版项目的中文偏重注意点，都添加在附录中，详见：</p>
+                    <blockquote>
+                        <b>附录一</b>：<a href="#appendix1"><i class="serif">Typo.css</i> 排版偏重点</a>
+                    </blockquote>
+                </div>
+                <!-- tag -->
+                <div class="m-padded-lr-responsive">
+                    <div class="ui basic teal left pointing label">test</div>
+                </div>
+                <!--give a press-->
+                <div class="ui center aligned basic segment">
+                    <button id="payButton" class="ui orange basic circular button">give press</button>
+                </div>
+                <div class="ui pay flowing popup transition hidden">
+                    <div class="ui orange basic label">
+                        <div class="ui images" style="font-size: inherit !important;">
+                            <div class="image">
+                                <img src="../static/images/cat.jpg" alt="" class="ui rounded bordered image" style="width: 120px">
+                                <div>Cat!!!</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui attached positive message">
+            <!--about me-->
+            <div class="ui middle aligned grid">
+                <div class="eleven wide column">
+                    <div class="ui list">
+                        <li>Author : </li>
+                        <li>Create Date : </li>
+                    </div>
+                </div>
+                <div class="five wide column">
+                    <img src="../static/images/cat.jpg" class="ui right floated rounded image" alt="" style="width: 110px">
+                </div>
+            </div>
+        </div>
+        <div class="ui bottom attached segment">
+            <!--留言area-->
+            <div class="ui test segment">
+                <div class="ui comments">
+                    <h3 class="ui dividing header">Comments</h3>
+                    <div class="comment">
+                        <a class="avatar">
+                            <img src="https://picsum.photos/id/0/5616/3744">
+                        </a>
+                        <div class="content">
+                            <a class="author">Matt</a>
+                            <div class="metadata">
+                                <span class="date">今天 5:42PM</span>
+                            </div>
+                            <div class="text">初音只是個軟體而已!! </div>
+                            <div class="actions">
+                                <a class="reply">Reply</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <a class="avatar">
+                            <img src="https://picsum.photos/id/0/5616/3744">
+                        </a>
+                        <div class="content">
+                            <a class="author">蔡依婷</a>
+                            <div class="metadata">
+                                <span class="date">昨天 12:30AM</span>
+                            </div>
+                            <div class="text">
+                                <p>什麼叫初音是個軟體而已... 想決鬥嗎?</p>
+                            </div>
+                            <div class="actions">
+                                <a class="reply">Reply</a>
+                            </div>
+                        </div>
+                        <div class="comments">
+                            <div class="comment">
+                                <a class="avatar">
+                                    <img src="https://picsum.photos/id/0/5616/3744">
+                                </a>
+                                <div class="content">
+                                    <a class="author">黃傳欣</a>
+                                    <div class="metadata">
+                                        <span class="date">剛剛</span>
+                                    </div>
+                                    <div class="text">好啦，應該說她 "本來" 是個軟體  :) </div>
+                                    <div class="actions">
+                                        <a class="reply">Reply</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <a class="avatar">
+                            <img src="https://picsum.photos/id/0/5616/3744">
+                        </a>
+                        <div class="content">
+                            <a class="author">何金銀</a>
+                            <div class="metadata">
+                                <span class="date">5 天前</span>
+                            </div>
+                            <div class="text">什麼叫做 "本來" 是個軟體! 你想要決鬥了嗎? </div>
+                            <div class="actions">
+                                <a class="reply">Reply</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ui form">
+                <div class="field">
+                    <textarea name="content" placeholder="這裡輸入文字..."></textarea>
+                </div>
+                <div class="fields">
+                    <div class="field m-mobile-wide m-margin-bottom-small">
+                        <div class="ui left icon input">
+                            <i class="user icon"></i>
+                            <input type="text" name="VisitorName" placeholder="Please insert your name">
+                        </div>
+                    </div>
+                    <div class="field m-mobile-wide m-margin-bottom-small">
+                        <button class="ui teal button m-mobile-wide"><i class="edit icon"></i>Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="toolbar" class="m-padded m-fixed m-right-bottom">
+    <div class="ui vertical icon buttons ">
+        <button type="button" class="ui toc teal button" >目錄</button>
+        <a href="#comment-container" class="ui teal button" >留言</a>
+        <a href="#" class="ui icon button"><i class="chevron up icon"></i></a>
+    </div>
+</div>
+
+<div class="ui toc-container flowing popup transition hidden" style="width: 250px!important;">
+    <ol class="js-toc"></ol>
+</div>
+<div id="qrcode" class="ui wechat-qr flowing popup transition hidden "style="width: 130px !important;">
+    <!--<img src="./static/images/wechat.jpg" alt="" class="ui rounded image" style="width: 120px !important;">-->
+</div>
+
+
+<!--底部 footer-->
+<footer class="ui inverted vertical segment m-padded-tb-massive">
+    <div class="ui center aligned container">
+        <!--grid 把width分16份 divided分割樣式-->
+        <div class="ui inverted divided stackable grid">
+            <div class="three wide column">
+                <div class="item">
+                    <!--rounded圓角-->
+                    <img src="../static/images/cat.jpg" class="ui rounded image" alt="" style="width: 110px">
+                </div>
+            </div>
+            <div class="three wide column">
+                <div class="ui inverted link list">
+                    <h4 class="ui inverted header m-opacity-mini">最新內容</h4>
+                    <div class="ui inverted link list m-text-thin m-opacity-mini">
+                        <a href="#" class="herf">用戶故事 (User Story)</a>
+                        <a href="#" class="herf">用戶故事 (User Story)</a>
+                        <a href="#" class="herf">用戶故事 (User Story)</a>
+                    </div>
+                </div>
+            </div>
+            <div class="four wide column">
+                <div class="ui inverted link list">
+                    <h4 class="ui inverted header m-opacity-mini">聯絡資訊</h4>
+                    <div class="ui inverted link list m-text-thin m-opacity-mini">
+                        <a href="#" class="herf">Email : bertt168@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="six wide column">
+                <div class="ui inverted link list">
+                    <h4 class="ui inverted header m-opacity-mini">This is about my Blog.</h4>
+                    <div class="ui inverted link list">
+                        <p class="m-text-thin m-text-spaced m-opacity-mini">test. ok!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui inverted section divider"></div>
+        <p class="m-text-thin m-text-spaced m-opacity-tiny">2019/03/17 building ...</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<script src="../static/lib/prism/prism.js"></script>
+<script src="../static/lib/tocbot/tocbot.min.js"></script>
+<script>
+    $('.menu.toggle').click(function () {
+        $('.m-item').toggleClass('m-mobile-hide');
+    });
+
+    $('#payButton').popup({
+        popup : $('.pay.popup'),
+        on : 'click',
+        position : 'bottom center'
+    });
+
+    tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.js-toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.js-toc-content',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3',
+    });
+    $('.toc.button').popup({
+        popup : $('.toc-container.popup'),
+        on : 'click',
+        position: 'left center'
+    });
+</script>
+
+</body>
+</html>

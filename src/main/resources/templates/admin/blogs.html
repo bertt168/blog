@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--網頁預覽效果-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Setting </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../../static/css/me.css">
+</head>
+<body>
+
+
+<!--menu-->
+<!--attached讓導覽列沒有圓角 inverted反轉顏色 -->
+<nav class="ui inverted attached segment m-padded-tb-mini">
+    <div class="ui container">
+        <!--secondary 改變樣式-->
+        <div class="ui inverted secondary stackable menu">
+            <h2 class="ui teal header item">Blog Setting</h2>
+            <a herf="#" class="m-item item m-mobile-hide"><i class="mini home icon"></i>blog</a>
+            <a herf="#" class="m-item item m-mobile-hide"><i class="mini idea icon"></i>分類</a>
+            <a herf="#" class="m-item item m-mobile-hide"><i class="mini tags icon"></i>標籤</a>
+            <div class="right m-item m-mobile-hide menu">
+                <div class="ui dropdown item">
+                    <div class="text">
+                        <img class="ui avatar image" src="https://picsum.photos/id/20/100/100">
+                        ShengpoLin
+                    </div>
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <a href="#" class="item">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+        <i class="sidebar icon"></i>
+    </a>
+</nav>
+<div class="ui mini attached pointing menu">
+    <div class="ui container">
+        <div class="right menu">
+            <a href="#" class="item">發佈</a>
+            <a href="#" class="teal active item">管理中心</a>
+        </div>
+    </div>
+</div>
+
+
+<!--內容-->
+<div class="m-container-small m-padded-tb-big">
+    <!--ui 容器的語法部分-->
+    <div class="ui container">
+        <form action="#" action="post" class="ui segment form">
+            <div class="inline fields">
+                <div class="field">
+                    <input type="text" name="title" placeholder="Title">
+                </div>
+                <div class="ui selection dropdown">
+                    <input type="hidden" name="type">
+                    <i class="dropdown icon"></i>
+                    <div class="default text">Type</div>
+                    <div class="menu">
+                        <div class="item" data-value="1">test1</div>
+                    </div>
+                </div>
+                <div class="field">
+                    <button class="ui m-margin-left teal basic button"><i class="search icon"></i>搜尋</button>
+                </div>
+            </div>
+        </form>
+
+        <table class="ui celled table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Type</th>
+                    <th>Update time</th>
+                    <th>operate</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+            <tfoot>
+            <tr>
+                <th colspan="5">
+                    <div class="ui mini pagination menu">
+                        <a class="item">上一頁</a>
+                        <a class="item">下一頁</a>
+                    </div>
+                    <a href="#" class="ui mini right floated teal basic button">新增</a>
+                </th>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+
+
+
+<!--底部 footer-->
+<footer class="ui inverted vertical segment m-padded-tb-massive">
+    <div class="ui center aligned container">
+        <!--grid 把width分16份 divided分割樣式-->
+        <div class="ui inverted divided stackable grid">
+            <div class="three wide column">
+                <div class="item">
+                    <!--rounded圓角-->
+                    <img src="../../static/images/cat.jpg" class="ui rounded image" alt="" style="width: 110px">
+                </div>
+            </div>
+            <div class="three wide column">
+                <div class="ui inverted link list">
+                    <h4 class="ui inverted header m-opacity-mini">最新內容</h4>
+                    <div class="ui inverted link list m-text-thin m-opacity-mini">
+                        <a href="#" class="herf">用戶故事 (User Story)</a>
+                        <a href="#" class="herf">用戶故事 (User Story)</a>
+                        <a href="#" class="herf">用戶故事 (User Story)</a>
+                    </div>
+                </div>
+            </div>
+            <div class="four wide column">
+                <div class="ui inverted link list">
+                    <h4 class="ui inverted header m-opacity-mini">聯絡資訊</h4>
+                    <div class="ui inverted link list m-text-thin m-opacity-mini">
+                        <a href="#" class="herf">Email : bertt168@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="six wide column">
+                <div class="ui inverted link list">
+                    <h4 class="ui inverted header m-opacity-mini">This is about my Blog.</h4>
+                    <div class="ui inverted link list">
+                        <p class="m-text-thin m-text-spaced m-opacity-mini">test. ok!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui inverted section divider"></div>
+        <p class="m-text-thin m-text-spaced m-opacity-tiny">2019/03/17 building ...</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<script>
+    $('.menu.toggle').click(function () {
+        $('.m-item').toggleClass('m-mobile-hide');
+    });
+
+    $('#payButton').popup({
+        popup : $('.pay.popup'),
+        on : 'click',
+        position : 'bottom center'
+    });
+    $('.ui.dropdown').dropdown({
+        on : 'hover'
+    });
+</script>
+
+</body>
+</html>
