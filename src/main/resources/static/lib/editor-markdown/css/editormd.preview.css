@@ -3213,12 +3213,12 @@
     color: #800;
   }
 
-  /* a comment */
+  /* a Comment */
   .typ {
     color: #606;
   }
 
-  /* a type name */
+  /* a Type name */
   .lit {
     color: #066;
   }
@@ -3233,7 +3233,7 @@
     color: #008;
   }
 
-  /* a markup tag name */
+  /* a markup Tag name */
   .atn {
     color: #606;
   }

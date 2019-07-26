@@ -3929,12 +3929,12 @@
     color: #800;
   }
 
-  /* a comment */
+  /* a Comment */
   .typ {
     color: #606;
   }
 
-  /* a type name */
+  /* a Type name */
   .lit {
     color: #066;
   }
@@ -3949,7 +3949,7 @@
     color: #008;
   }
 
-  /* a markup tag name */
+  /* a markup Tag name */
   .atn {
     color: #606;
   }
@@ -4364,11 +4364,11 @@ hr.editormd-page-break {
   .editormd-preview-theme-dark {
     /* string content */
     /* a keyword */
-    /* a comment */
-    /* a type name */
+    /* a Comment */
+    /* a Type name */
     /* a literal value */
     /* punctuation, lisp open bracket, lisp close bracket */
-    /* a markup tag name */
+    /* a markup Tag name */
     /* a markup attribute name */
     /* a markup attribute value */
     /* a declaration; a variable name */

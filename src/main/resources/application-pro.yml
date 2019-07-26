@@ -13,6 +13,6 @@ logging:
   level:
     root: warn
     com.lrm: info
-  file: log/blog-pro.blog
+  file: log/Blog-pro.Blog
 server:
   port: 8081

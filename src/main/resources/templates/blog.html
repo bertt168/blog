@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="_fragments :: head(~{::title})">
     <meta charset="UTF-8">
     <!--網頁預覽效果-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +17,7 @@
 
 <!--menu-->
 <!--attached讓導航列沒有圓角 inverted反轉顏色 -->
-<nav class="ui inverted attached segment m-padded-tb-mini">
+<nav th:replace="_fragments :: menu(1)" class="ui inverted attached segment m-padded-tb-mini">
     <div class="ui container">
         <!--secondary 改變樣式-->
         <div class="ui inverted secondary stackable menu">
@@ -171,7 +171,7 @@ h5,h6{font-size:1em;}
                         <b>附录一</b>：<a href="#appendix1"><i class="serif">Typo.css</i> 排版偏重点</a>
                     </blockquote>
                 </div>
-                <!-- tag -->
+                <!-- Tag -->
                 <div class="m-padded-lr-responsive">
                     <div class="ui basic teal left pointing label">test</div>
                 </div>
@@ -313,7 +313,7 @@ h5,h6{font-size:1em;}
 
 
 <!--底部 footer-->
-<footer class="ui inverted vertical segment m-padded-tb-massive">
+<footer th:replace="_fragments :: footer"  class="ui inverted vertical segment m-padded-tb-massive">
     <div class="ui center aligned container">
         <!--grid 把width分16份 divided分割樣式-->
         <div class="ui inverted divided stackable grid">
@@ -355,35 +355,37 @@ h5,h6{font-size:1em;}
     </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
-<script src="../static/lib/prism/prism.js"></script>
-<script src="../static/lib/tocbot/tocbot.min.js"></script>
-<script>
-    $('.menu.toggle').click(function () {
-        $('.m-item').toggleClass('m-mobile-hide');
-    });
+<th:block  th:replace="_fragments :: script">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <script src="../static/lib/prism/prism.js"></script>
+    <script src="../static/lib/tocbot/tocbot.min.js"></script>
+    <script>
+        $('.menu.toggle').click(function () {
+            $('.m-item').toggleClass('m-mobile-hide');
+        });
 
-    $('#payButton').popup({
-        popup : $('.pay.popup'),
-        on : 'click',
-        position : 'bottom center'
-    });
+        $('#payButton').popup({
+            popup : $('.pay.popup'),
+            on : 'click',
+            position : 'bottom center'
+        });
 
-    tocbot.init({
-        // Where to render the table of contents.
-        tocSelector: '.js-toc',
-        // Where to grab the headings to build the table of contents.
-        contentSelector: '.js-toc-content',
-        // Which headings to grab inside of the contentSelector element.
-        headingSelector: 'h1, h2, h3',
-    });
-    $('.toc.button').popup({
-        popup : $('.toc-container.popup'),
-        on : 'click',
-        position: 'left center'
-    });
-</script>
+        tocbot.init({
+            // Where to render the table of contents.
+            tocSelector: '.js-toc',
+            // Where to grab the headings to build the table of contents.
+            contentSelector: '.js-toc-content',
+            // Which headings to grab inside of the contentSelector element.
+            headingSelector: 'h1, h2, h3',
+        });
+        $('.toc.button').popup({
+            popup : $('.toc-container.popup'),
+            on : 'click',
+            position: 'left center'
+        });
+    </script>
+</th:block>
 
 </body>
 </html>

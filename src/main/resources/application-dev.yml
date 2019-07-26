@@ -14,4 +14,4 @@ logging:
   level:
     root: info
     com.lrm: debug
-  file: log/blog-dev.blog
+  file: log/Blog-dev.Blog
